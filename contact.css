@@ -1,0 +1,174 @@
+*{
+    font-family: "Poppins", sans-serif
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f2f2f2;
+  }
+  
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 30px;
+    background-color: hotpink;
+    color: white;
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+
+  nav ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  nav ul li {
+    margin-left: 20px;
+  }
+  
+  nav ul li:first-child {
+    margin-left: 0;
+  }
+  
+  nav a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+  }
+  
+  main {
+    margin: 0px auto;
+  }
+  
+  section {
+    height: 100vh;
+    padding-top: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  }
+
+  .form {
+    background-color: #f2f2f2;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center; 
+    width: 650px;
+    margin: 0 auto;
+  }
+
+  fieldset {
+  border: none;
+  }
+
+  h2 {
+    color: #333;
+    margin-bottom: 10px;
+  }
+
+  p {
+    color: #666;
+    margin-bottom: 20px;
+  }
+
+  label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+    font-weight: bold;
+    text-align: left;
+    
+  }
+
+  input[type="text"],
+  input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    box-sizing: border-box;
+  }
+
+  input[type="submit"] {
+    background-color: rgb(109, 187, 255);
+  color: white;
+  border-radius: 20px;
+  width: 80px;
+  height: 40px;
+  margin: 10px;
+  text-align: center;
+  padding-right: 10px;
+  font-family: "Poppins", sans-serif;
+  font-weight: bold;
+  font-style: normal;
+    cursor: pointer;
+  }
+
+  input[type="submit"]:hover {
+    background-color: #bfcdcc;
+  }
+
+  footer {
+    background-color: hotpink;
+    text-align: center;
+    padding: 10px;
+    bottom: 0;
+    width: 100%;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+  }
+  
+  footer p {
+    color: white;
+  }
+
+  /* Ukurannya */
+/* Laptop */
+@media (max-width: 992px) {
+  html {
+    font-size: 75%;
+  }
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+  html {
+    font-size: 65%;
+  }
+  .form {
+    width: 500px;
+  }
+  .mynavbar .navlink {
+    font-size: 2rem;
+    text-align: center;
+  }
+  .sticky-top {
+    overflow: hidden;
+  }
+}
+
+/* Handphone */
+@media (max-width: 576px) {
+  html {
+    font-size: 60%;
+  } 
+  .form {
+    width: 400px;
+  }
+  .simply-section {
+    padding: 45px;
+    margin: 3px;
+  }
+}
