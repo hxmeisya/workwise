@@ -50,11 +50,12 @@ section {
   height: 70dvh;
   display: flex;
   flex-direction: column;
-  padding-left: 20px;
+  padding-left: 30px;
   justify-content: center;
   background-color: #fff;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding-top: 10px;
 }
 
 .daftar-button {
@@ -95,6 +96,7 @@ button[type="button"]:hover {
 
 .container {
   display: flex;
+  align-items: right;
 }
 
 .logo {
@@ -106,6 +108,7 @@ button[type="button"]:hover {
   display: flex;
   flex-direction: column;
   gap: 0px;
+  flex: 1;
 }
 
 .content h3 {
@@ -132,6 +135,36 @@ button[type="button"]:hover {
   font-family: "Poppins", sans-serif;
   font-weight: 400;
   font-style: normal;
+}
+
+.image-container {
+  margin-left: 900px;
+  padding-top: 0px;
+  position: relative;
+	z-index: 20;
+}
+
+.image-container img {
+  max-width: 100%;
+  margin-top: -160px;
+  height: auto;
+  display: block;
+}
+
+footer a:link {
+  color: blue;
+}
+
+footer a:visited {
+  color: purple;
+}
+
+footer a:hover {
+  color: red;
+}
+
+footer a:active {
+  color: green;
 }
 
 footer {

@@ -89,6 +89,49 @@
   tr:hover {
     background-color: #bfcdcc;
   }
+
+  select {
+    padding: 8px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 10px;
+    background-color: #f1f1f1;
+    font-size: 14px;
+    cursor: pointer;
+    max-height: 200px;
+    overflow-y: auto;
+    text-indent: 3px;
+  }
+  
+  select:hover {
+    background-color: #eaeaea;
+  }
+  
+  select option {
+    background-color: #f1f1f1;
+    color: black;
+    text-align: left;
+  }
+
+  option:hover {
+    color: hotpink;
+  }
+
+  footer a:link {
+    color: blue;
+  }
+  
+  footer a:visited {
+    color: purple;
+  }
+  
+  footer a:hover {
+    color: red;
+  }
+  
+  footer a:active {
+    color: green;
+  }
   
   footer {
     background-color: hotpink;
@@ -129,7 +172,7 @@
   }
 
   table {
-    width: 100%;
+    width: 150%;
     font-size: 14px;
     margin-top: 10px;
     margin-bottom: 10px;
@@ -148,4 +191,9 @@
   footer {
     margin-top: 150px;
   }
-}
+    
+  .simply-section {
+      padding: 45px;
+      margin: 3px;
+    }
+  }

@@ -73,6 +73,22 @@
   article h4 {
     color: black;
   }
+
+  footer a:link {
+    color: blue;
+  }
+  
+  footer a:visited {
+    color: purple;
+  }
+  
+  footer a:hover {
+    color: red;
+  }
+  
+  footer a:active {
+    color: green;
+  }
   
   footer {
     background-color: hotpink;
