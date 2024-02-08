@@ -4,17 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" type="text/css" href="contact.css" />
-    <link
-      rel="icon"
-      href="img/workwise.png"
-      type="image/x-icon"
-    />
+    <link rel="icon" href="img/workwise.png" type="image/x-icon"/>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet"/>
 
     <title>Contact | WorkWise</title>
     <link rel="shortcut icon" href="" />
@@ -22,7 +15,12 @@
   <body>
     <header>
       <h1>WorkWise</h1>
-      <nav>
+      <div class="hamburger">
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+    </div>
+      <nav class="nav-bar">
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About</a></li>
@@ -43,6 +41,14 @@
                 <input type="text" id="name" name="name"><br>
                 <br><label for="email">Email</label>
                 <input type="text" id="email" name="email"><br>
+                <label for="jobs">Pekerjaan</label>
+                <select class="jobs dropdown">
+                <option value="desainer grafis">Desainer Grafis</option>
+                <option value="pengembang web">Pengembang Web</option>
+                <option value="fotografer">Fotografer</option>
+                <option value="pemasar digital">Pemasar Digital</option>
+                <option value="konsultan keuangan">Konsultan Keuangan</option>
+                </select>
                 <br><label for="kp">Kesan dan Pesan</label>
                 <textarea id="kp" name="kp"></textarea><br>
                 <input type="submit" value="Submit">
@@ -55,5 +61,13 @@
       <footer>
         <p>&copy; 2024 WorkWise. All rights reserved. | <a href="https://www.instagram.com/sasyyaw?igsh=MWM2dmRnY3llYm1mYg==" target="_blank">@sasyyaw</a></p>
       </footer>
+
+      <script>
+        hamburger = document.querySelector(".hamburger");
+        hamburger.onclick = function() {
+          navbar = document.querySelector(".nav-bar")
+          navbar.classList.toggle("active")
+        }
+      </script>
 </body>
 </html>

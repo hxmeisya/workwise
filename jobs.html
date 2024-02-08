@@ -4,16 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" type="text/css" href="jobs.css" />
-    <link
-      rel="icon"
-      href="img/workwise.png"
-      type="image/x-icon"
-    />
+    <link rel="icon" href="img/workwise.png" type="image/x-icon"/>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
-      rel="stylesheet"
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"rel="stylesheet"
     />
 
     <title>Jobs | WorkWise</title>
@@ -21,16 +15,30 @@
   </head>
   <body>
     <header>
-      <h1>WorkWise</h1>
-      <nav>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="jobs.html">Jobs</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </nav>
-    </header>
+  <h1>WorkWise</h1>
+  <div class="hamburger">
+    <div class="line"></div>
+    <div class="line"></div>
+    <div class="line"></div>
+  </div>
+  <nav class="nav-bar">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li class="dropdown">
+        <a href="jobs.html">Jobs</a>
+        <div class="dropdown-content">
+          <a href="#">Desainer Grafis</a>
+          <a href="#">Pengembang Web</a>
+          <a href="#">Fotografer</a>
+          <a href="#">Pemasar Digital</a>
+          <a href="#">Konsultan Keuangan</a>
+        </div>
+      </li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
 
     <main>
       <section>
@@ -129,6 +137,11 @@
     </footer>
 
     <script>
+      hamburger = document.querySelector(".hamburger");
+      hamburger.onclick = function() {
+        navbar = document.querySelector(".nav-bar")
+        navbar.classList.toggle("active")
+      }
       const dropdowns = document.querySelectorAll('select');
 
 dropdowns.forEach(function(dropdown) {

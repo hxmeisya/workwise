@@ -1,53 +1,76 @@
-*{
-    font-family: "Poppins", sans-serif
+*, html {
+  font-family: "Poppins", sans-serif;
 }
 
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f2f2f2;
-  }
-  
-  header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 5px 30px;
-    background-color: hotpink;
-    color: white;
-    font-family: "Poppins", sans-serif;
-    font-weight: 700;
-    font-style: normal;
-  }
+  margin: 0;
+  padding: 0;
+  background-color: #f2f2f2;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
 
-  nav ul {
-    display: flex;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-  
-  nav ul li {
-    margin-left: 20px;
-  }
-  
-  nav ul li:first-child {
-    margin-left: 0;
-  }
-  
-  nav a {
-    text-decoration: none;
-    color: #fff;
-    font-weight: bold;
-  }
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px 30px;
+  background-color: hotpink;
+  color: white;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.hamburger {
+  display: none;
+}
+
+.nav-bar ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-bar ul li {
+  margin-left: 20px;
+}
+
+.nav-bar ul li:first-child {
+  margin-left: 0;
+}
+
+.nav-bar ul li a {
+  text-decoration: none;
+  display: block;
+  color: white;
+  transition: .2s;
+}
+
+.nav-bar ul li a::after {
+  display: block;
+  content: "";
+  transform: scaleX(0);
+  transition: transform 250ms ease-in-out;
+}
+
+.nav-bar ul li a:hover::after {
+  transform: scaleX(1);
+}
+
+.nav-bar a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+}
   
   main {
     margin: 0px auto;
   }
   
   section {
-    height: 125dvh;
+    height: 140dvh;
     padding-top: 20px;
     background-color: #fff;
     border-radius: 8px;
@@ -78,12 +101,13 @@ body {
 
   p {
     color: #666;
-    margin-bottom: 20px;
+    margin-bottom: -5px;
   }
 
   label {
     display: block;
     margin-bottom: 5px;
+    margin-top: 15px;
     color: #333;
     font-weight: bold;
     text-align: left;
@@ -100,6 +124,10 @@ body {
     box-sizing: border-box;
   }
 
+  #name {
+    margin-bottom: -8px;
+  }
+
   #kp {
     width: 100%;
     height: 150px;
@@ -109,6 +137,15 @@ body {
     border: 1px solid #ccc;
     border-radius: 20px;
     resize: none;
+  }
+
+  .jobs {
+      width: 100%;
+      margin-bottom: 10px;
+      padding: 10px;
+      box-sizing: border-box;
+      border: 1px solid #ccc;
+      border-radius: 20px;
   }
 
   input[type="submit"] {
@@ -148,13 +185,15 @@ body {
 
   footer {
     background-color: hotpink;
+    color: #fff;
     text-align: center;
     padding: 10px;
     bottom: 0;
-    width: 100%;
+
     font-family: "Poppins", sans-serif;
     font-weight: 500;
     font-style: normal;
+    height: 50px;
   }
   
   footer p {
@@ -187,13 +226,83 @@ body {
 }
 
 /* Handphone */
-@media (max-width: 576px) {
+@media only screen and (max-width: 576px) {
   html {
     font-size: 60%;
   } 
+  section {
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
+  .hamburger {
+    display: block;
+    cursor: pointer;
+  }
+  .hamburger .line {
+    width: 26px;
+    height: 3px;
+    background-color: white;
+    margin: 6px 0;
+  }
+  .nav-bar {
+    height: 0;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    right: 0;
+    width: 100vw;
+    background-color: rgb(255, 176, 216);
+    transition: 0.5s;
+    overflow: hidden;
+    box-shadow: 0 16px 8px -9px rgb(191, 191, 191, 1);
+  }
+  .nav-bar.active {
+    height: 250px;
+  }
+  .nav-bar ul {
+    display: block;
+    width: fit-content;
+    margin: 50px auto 0 auto;
+    text-align: center;
+    transition: 0.5s;
+    opacity: 0;
+  }
+  .nav-bar ul li {
+    display: flex;
+    margin-left: 0;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .nav-bar.active ul {
+    opacity: 1;
+  }
+  .nav-bar ul li a {
+    margin-bottom: 12px;
+    font-size: 14px;
+    color: white;
+  }
   .form {
     width: 400px;
   }
+  .form h2 {
+    font-size: 16px;
+  }
+
+  .form p {
+    font-size: 12px;
+  }
+
+  .form input[type="text"],
+  .form textarea,
+  .form select {
+    font-size: 12px;
+  }
+
+  .form label {
+    font-size: 14px;
+  }
+
   .simply-section {
     padding: 45px;
     margin: 3px;
